@@ -1,0 +1,66 @@
+
+import java.util.Scanner;//imports the scanner
+public class VendingMachine {//Program name 
+    public static void main(String args[]) {//starts the main method
+    Scanner input=new Scanner(System.in);//names the scanner,and creates a scanner object
+
+        System.out.println("Welcome to the Vending Machine");//Prints the message to the main screen
+        System.out.println("Please insert your cash");//Prints the message to the main screen
+        double cash=input.nextDouble();//stores the users input as cash
+        double snickers=(cash-2.50);//declares the variable "snickers" as the formula
+        double milkyway=(cash-2.25);//declares the variable "milkyway" as the formula
+        double coke=(cash-1.35);//declares the variable "coke" as the formula
+        double pepsi=(cash-1.25);//declares the variable "pepsi" as the formula
+        double mandm=(cash-1.30);//declares the variable "mandm" as the formula
+
+
+        if(cash==10||cash==5){//if the boolean-expression is true then it will do everything that's inside the bracket
+            System.out.println("Please select a product:");//Displays the message to the main screen
+            System.out.println("Press 1 for Snickers-$2.50");//Displays the message to the main screen
+            System.out.println("Press 2 for Milkyway-$2.25");//Displays the message to the main screen
+            System.out.println("Press 3 for Coke-$1.35");//Displays the message to the main screen
+            System.out.println("Press 4 for Pepsi-$1.25");//Displays the message to the main screen
+            System.out.println("Press 5 for M&M-$1.30");//Displays the message to the main screen
+        }
+
+
+        else{//if the "if" statement is false, it will do everything that's inside this bracket
+            System.out.print("This machine only takes $5 and $10 bills only, have a nice day");//Displays the message to the main screen
+
+        }
+
+
+        int press=input.nextInt();//stores the users input as press
+        switch(press){//the switch statement executes which ever case depending on the variable
+            case 1:System.out.println("Your Selection: 1");//Displays the message to the main screen
+                System.out.println("Please pick up your Snickers below");//Displays the message to the main screen
+                    System.out.println("Your change is :" +snickers);//Displays the message to the main screen, and calculates the formula for the variable "snickers"
+            break;//ends the switch statement
+
+            case 2:System.out.println("Your Selection: 2");//Displays the message to the main screen
+                System.out.println("Please pick up your MilkyWay below");//Displays the message to the main screen
+                    System.out.println("Your change is :" +milkyway);//Displays the message to the main screen, and calculates the formula for the variable "milkyway"
+            break;//ends the switch statement
+
+            case 3:System.out.println("Your Selection: 3");//Displays the message to the main screen
+                System.out.println("Please pick up your Coke below");//Displays the message to the main screen
+                    System.out.println("Your change is :" +coke);//Displays the message to the main screen, and calculates the formula for the variable "coke"
+            break;//ends the switch statement
+
+            case 4:System.out.println("Your Selection: 4");//Displays the message to the main screen
+                System.out.println("Please pick up your Pepsi below");//Displays the message to the main screen
+                    System.out.println("Your change is :" +pepsi);//Displays the message to the main screen, and calculates the formula for the variable "pepsi"
+            break;//ends the switch statement
+
+            case 5:System.out.println("Your Selection: 5");//Displays the message to the main screen
+                System.out.println("Please pick up your M&M’s below");//Displays the message to the main screen
+                    System.out.println("Your change is :" +mandm);//Displays the message to the main screen, and calculates the formula for the variable "mandm"
+            break;//ends the switch statement
+
+        }
+
+            System.out.println("Thank you, and have a blessed day");//Displays the message to the main screen
+
+    }    
+
+}        
